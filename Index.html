@@ -14,7 +14,7 @@
        <img id="banner" src="IMGS/banner.png" alt="banner home de galeria">
     </div>
 
-    <section id="brand">  
+  <section id="brand">  
       <div class="cabecera-container">
         <div id="brand-container">
           <div class="logo">
@@ -24,26 +24,27 @@
               <h1>ARTillería</h1>
           </div>
         </div>
-    </section>
-    
-      <section id="menu-bar">
-        <button id="abrir" class="abrir-ham"><i class="bi bi-list"></i>
+  </section>
+
+  <section id="menu-bar">
+    <button id="abrir" class="abrir-ham"><i class="bi bi-list"></i>
+    </button>
+      <nav class="nav" id="nav">
+        <button id="cerrar" class="cerrar-ham"><i class="bi bi-x-circle-fill"></i>
         </button>
-        <nav class="nav-container" id="nav">
-          <button id="cerrar" class="cerrar-ham"><i class="bi bi-x-circle-fill"></i>
-          </button>
-          <ul class="nav-links">
-            <li><a href="../ARTillería/Index.html">HOME</a></li>
-            <li><a href="../TEMPLATES/Gallery.html">GALERÍA</a></li>
-            <li><a href="../TEMPLATES/About.html">ABOUT</a></li>
-            <li><a href="../TEMPLATES/Profile.html">PERFIL</a></li>
-          </ul>
-        </nav>
-        <div class="button-container">
-            <button id="login-button" href="../ARTillería/TEMPLATES/Login.html" ><i class="bi bi-person-circle"></i></button>
-            <button id="cart-button" onclick="addToCart()"><i class="bi bi-bag-fill"></i></button>
-        </div>
-      </section>
+        <ul class="nav-links">
+          <li><a href="../ARTillería/Index.html">HOME</a></li>
+          <li><a href="../TEMPLATES/Gallery.html">GALERÍA</a></li>
+          <li><a href="../TEMPLATES/About.html">ABOUT</a></li>
+          <li><a href="../TEMPLATES/Profile.html">PERFIL</a></li>
+        </ul>
+      </nav>
+    <div class="button-container">
+        <button id="login-button" href="../ARTillería/TEMPLATES/Login.html" ><i class="bi bi-person-circle"></i></button>
+        <button id="cart-button" onclick="addToCart()"><i class="bi bi-bag-fill"></i></button>
+    </div>
+  </section>
+
 </header>
 
 <div>
@@ -59,10 +60,10 @@
   <div class="explore">
     <h2>EXPLORA</h2>
   </div>
-
+  
 </section>
 
-<script src="JS/scriptIndex.js" ></script>
+<script src="./JS/home.js" ></script>
 </body>
 </html>
           
