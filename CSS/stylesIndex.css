@@ -61,7 +61,7 @@ h1{
 
 .nav-links li a{
     text-decoration: none;
-    color: rgb(37, 0, 72);
+    color: #2E0051;
     font-size: 10px;
     background-color: #ead1ff;
     border-color: #ead1ff;
@@ -84,7 +84,104 @@ h1{
 #banner{
     width: 50rem;
 }
-/*RESPONSIVE*/
+
+/*Carousel*/
+#album-rotator {
+    width: 1000px;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    word-break: keep-all;
+    padding: 2rem 0;
+}
+#album-rotator-holder {
+    position: relative;
+    user-select: none;
+    will-change: transform;
+    /* transition: all 0.01s ease-out; */
+    /* transition: all 0.01s linear; */
+}
+
+div#album-rotator-holder {}
+#album-rotator:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.album-item {
+    word-break: keep-all;
+    background: #FFFBB3;
+    position: relative;
+    width: 250px;
+    -webkit-user-drag: none;
+    height: 300px;
+    user-select: none;
+    border-radius: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 1rem 0 0;
+    transition: all 0.2s ease-out;
+    transform: scale(1);
+}
+
+.album-item:hover {
+    cursor: pointer;
+}
+.album-details {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    white-space: initial;
+    float:left;
+    box-sizing: border-box;
+    color: white;
+    height: 100%;
+    font-size: 2.5rem;
+    font-weight: 600;
+    z-index: 99;
+}
+.album-cover{
+    width: 15rem;
+    margin-bottom: 10rem;
+
+}
+.subtext {
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem 5.5rem;
+    width: 100%;
+    white-space: initial;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    font-weight: 300;
+    background-color: rgba(255, 251, 179, .3);
+    background-size: 10%;
+}
+.icon {
+    font-size: 1rem;
+    line-height: 1rem;
+    display: block;
+    padding: 0 0 0.5rem 0;
+}
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+/*/////////////RESPONSIVE////////////*/
 
 .abrir-ham,
 .cerrar-ham {
@@ -128,11 +225,21 @@ h1{
         visibility: visible;
         margin: 40%;
         width: 15vw;
+        z-index: 1000;
     }
     .nav-links{
         flex-direction: column;
         align-items: end;
     }
+
+    /*#brand-container{
+        height: 20vh;
+    }
+
+    #banner{
+        height: 50rem;
+
+    }*/
 }
 /* ESTILOS CUERPO HOME */
 
@@ -150,8 +257,9 @@ h1{
 
 h2{
     font-family: Georgia;
-    font-weight:600;
+    font-weight: 600;
     margin-left: 5%;
     font-size: smaller;
-    color: black;
+    color: #2E0051;
+    font-size: large;
 }

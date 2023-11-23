@@ -9,61 +9,74 @@
 </head>
 <body>
   <header>
-    
     <div>
        <img id="banner" src="IMGS/banner.png" alt="banner home de galeria">
     </div>
+    
+    <section id="menu-bar">
+      <button id="abrir" class="abrir-ham"><i class="bi bi-list"></i>
+      </button>
+        <nav class="nav" id="nav">
+          <button id="cerrar" class="cerrar-ham"><i class="bi bi-x-circle-fill"></i>
+          </button>
+          <ul class="nav-links">
+            <li><a href="../ARTillería/Index.html">HOME</a></li>
+            <li><a href="../TEMPLATES/Gallery.html">GALERÍA</a></li>
+            <li><a href="../TEMPLATES/About.html">ABOUT</a></li>
+            <li><a href="../TEMPLATES/Profile.html">PERFIL</a></li>
+          </ul>
+        </nav>
+      </section>
+      <div class="button-container">
+          <button id="login-button" href="../ARTillería/TEMPLATES/Login.html" ><i class="bi bi-person-circle"></i></button>
+          <button id="cart-button" onclick="addToCart()"><i class="bi bi-bag-fill"></i></button>
+      </div>
+  </header>
+  
+  <div>
+    <P id="subtitle">ARTillería nace del deseo de mantener viva la relación entre comunidad y expresión artística. <br> Expande tus horizontes, mantén viva la expresión libre y ayuda a tu comunidad local a prosperar.</P>
+  </div>
 
-  <section id="brand">  
-      <div class="cabecera-container">
-        <div id="brand-container">
-          <div class="logo">
-              <a href="../ARTillería/Index.html"><img class="logo" src="IMGS/logo-mannequin.png" alt="Artilleria Logo"/></a>
-          </div>
-          <div>
-              <h1>ARTillería</h1>
-          </div>
-        </div>
+  <section class="news">
+  <h2>NOVEDADES</h2>
+  <div id="album-rotator">
+      <div id="album-rotator-holder">
+          <a target="_top" class="album-item">
+              <span class="album-details">
+                  <span class="subtext">Event</span>
+              </span>
+          </a>
+          <a target="_top" class="album-item">
+              <span class="album-details">
+                <img class="album-cover" src="./IMGS/novedades-1.jpg" alt="">
+                  <span class="subtext">Auction</span>
+              </span>
+          </a>
+          <a target="_top" class="album-item">
+              <span class="album-details">
+                  <span class="subtext">Collection</span>
+              </span>
+          </a>
+          <a target="_top" class="album-item">
+              <span class="album-details">
+                  <span class="subtext">Collection</span>
+              </span>
+          </a>
+          <a class="album-item">
+              <span class="album-details">
+                  <span class="subtext">Event</span>
+              </span>
+          </a>
+      </div>
+  </div>
   </section>
 
-  <section id="menu-bar">
-    <button id="abrir" class="abrir-ham"><i class="bi bi-list"></i>
-    </button>
-      <nav class="nav" id="nav">
-        <button id="cerrar" class="cerrar-ham"><i class="bi bi-x-circle-fill"></i>
-        </button>
-        <ul class="nav-links">
-          <li><a href="../ARTillería/Index.html">HOME</a></li>
-          <li><a href="../TEMPLATES/Gallery.html">GALERÍA</a></li>
-          <li><a href="../TEMPLATES/About.html">ABOUT</a></li>
-          <li><a href="../TEMPLATES/Profile.html">PERFIL</a></li>
-        </ul>
-      </nav>
-    <div class="button-container">
-        <button id="login-button" href="../ARTillería/TEMPLATES/Login.html" ><i class="bi bi-person-circle"></i></button>
-        <button id="cart-button" onclick="addToCart()"><i class="bi bi-bag-fill"></i></button>
-    </div>
-  </section>
-
-</header>
-
-<div>
-  <P id="subtitle">ARTillería nace del deseo de mantener viva la relación entre comunidad y expresión artística. <br> Expande tus horizontes, mantén viva la expresión libre y ayuda a tu comunidad local a prosperar.</P>
+<div class="explore">
+  <h2>EXPLORA</h2>
 </div>
 
-<section id="home-body">
-
-  <div class="novedades">
-    <h2>NOVEDADES</h2>
-  </div>
-
-  <div class="explore">
-    <h2>EXPLORA</h2>
-  </div>
-  
-</section>
-
-<script src="./JS/home.js" ></script>
+<script src="./JS/home.js"></script>
+<script src="./JS/carousel.js"></script>
 </body>
 </html>
           
