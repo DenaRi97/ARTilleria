@@ -132,6 +132,16 @@ h1{
     width: 2%;
 }
 
+#form{
+    font-style: italic;
+    font-size: 8px;
+}
+.formulario, input{
+    border-radius: 2px;
+    border: 10%;
+    border-color: #FFD2E8;
+}
+
 /*-----HOME-----*/
 #subtitle{
     background: rgb(255,255,255);
@@ -152,12 +162,242 @@ h2{
     color: #2E0051;
     font-size: large;
 }
-/*Carousel*/
+
+/* --- --- CAROUSEL --- --- */
+#album-rotator {
+    width: 1000px;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+}
+#album-rotator-holder {
+    position: relative;
+    user-select: none;
+    will-change: transform;
+    /* transition: all 0.01s ease-out; */
+    /* transition: all 0.01s linear; */
+}
+
+div#album-rotator-holder {}
+#album-rotator:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events:none;
+}
+.album-item {
+    word-break: keep-all;
+    background:#f6f3c5;
+    position: relative;
+    width: 250px;
+    -webkit-user-drag:element;
+    -webkit-user-drag: auto;
+    height: 300px;
+    user-select:auto;
+    border-radius: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 3rem 0 0;
+    transition: all 0.2s ease-out;
+    transform: scale(1);
+}
+
+.album-item:hover {
+    transform: scale(1.02);
+}
+.album-details {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.5);
+    padding: 1rem;
+    white-space: initial;
+    float: left;
+    box-sizing: border-box;
+    color: white;
+    height: 100%;
+    font-size: 2.5rem;
+    font-weight: 600;
+    z-index: 99;
+}
+
+.subtext {
+    font-size: 1.1167rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem 1rem;
+    width: 100%;
+    white-space: initial;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*Formulario*/
+
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.formulario__label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.formulario__grupo-input {
+	position: relative;
+}
+
+.formulario__input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.formulario__input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario__checkbox {
+	margin-right: 10px;
+}
+
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario__btn {
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
 
 
-/*Display*/
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
 
+	.formulario__grupo-terminos, 
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	}
 
+	.formulario__btn {
+		width: 100%;
+	}
+}
 /*/////////////RESPONSIVE////////////*/
 
 .abrir-ham,
@@ -219,4 +459,3 @@ h2{
     }*/
 }
 /*///RESP-Home///*/
-
