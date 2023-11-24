@@ -6,9 +6,6 @@
     <title>ARTílleria</title>
     <!--FROM BOOTSTRAP ICONS ONLY-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 
-    <script src="https://kit.fontawesome.com/48764efa36.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/stylesIndex.css">
 </head>
@@ -45,34 +42,23 @@
   <section class="news">
     <h2>Novedades</h2>
     <hr class="divider">
-    <div id="album-rotator">
-        <div id="album-rotator-holder">
-            <a target="_top" class="album-item">
-                <span class="album-details">
-                    <span class="subtext">On Twitter</span>
-                </span>
-            </a>
-            <a target="_top" class="album-item">
-                <span class="album-details">
-                    <span class="subtext">View tutorial for this effect</span>
-                </span>
-            </a>
-            <a target="_top" class="album-item">
-                <span class="album-details">
-                    <span class="subtext">Some text to describe this item</span>
-                </span>
-            </a>
-            <a target="_top" class="album-item">
-                <span class="album-details">
-                    <span class="subtext">Some text to describe this item</span>
-                </span>
-            </a>
-            <a class="album-item">
-                <span class="album-details">
-                    <span class="subtext">Some text to describe this item</span>
-                </span>
-            </a>
-        </div>
+  </section>
+
+  <section aria-label="Newest Photos">
+    <div class="carousel" data-carousel>
+      <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+      <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+      <ul data-slides>
+        <li class="slide" data-active>
+          <img src="IMGS/novedades-1.jpg" alt="Nature Image #1">
+        </li>
+        <li class="slide">
+          <img src="IMGS/novedades-2.jpg" alt="Nature Image #2">
+        </li>
+        <li class="slide">
+          <img src="IMGS/novedades-3.jpg" alt="Nature Image #3">
+        </li>
+      </ul>
     </div>
   </section>
 
