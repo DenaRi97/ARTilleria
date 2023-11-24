@@ -1,4 +1,4 @@
-//Botones de menu hamburguesa
+//---------MENU HAMBURGUESA-------//
 
 const nav = document.querySelector("#nav")
 const abrir = document.querySelector("#nav-bar, #abrir")
@@ -24,4 +24,5 @@ cerrar.addEventListener("click", () => {
     nav.classList.remove("visible")
 })*/
 
-/*///////////////CARRUSEL//////////////*/
+//---------CARRUSEL----------//
+

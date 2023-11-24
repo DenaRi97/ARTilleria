@@ -1,8 +1,17 @@
-body {
-    background: rgb(148,77,205);
-    background: linear-gradient(180deg, rgba(148,77,205,0.5) 30%, rgba(180,130,220,0.5) 60%, rgba(255,255,255,1) 100%);
-    background-repeat: no-repeat;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
+body {
+    background-image: url(../IMGS/canvas-header.jpg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    background: linear-gradient(180deg, rgba(148,77,205,0.5) 30%, rgba(180,130,220,0.5) 60%, rgba(255,255,255,1) 100%);
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -15,7 +24,7 @@ h1{
     font-weight: 700; 
     word-wrap: break-word;
     margin: 0%;
-    width: 150%;
+    width: 100%;
     
 }
 
@@ -31,7 +40,7 @@ h2{
     opacity: 70%;
     border: radius 20%;
     align-items:center;
-    border-radius: 60px
+    border-radius: 60px;
 }
     
 h3{
@@ -63,23 +72,21 @@ h3{
     align-self: center;
     width: 40px;
     margin-bottom: 0%;
-
 }
 
 
-.banner{
+#banner{
     width: 100%;
 }
 
 .container-inicio{
-    
     display: grid;
-    grid-template-columns: 98%;
-    grid-template-rows: 4% 8% 40% 3%;
+    grid-template-columns: 100%;
+    grid-template-rows: 0% 6% 30% 3%;
     justify-items: center;
-    justify-content: center;
-    align-content: center;
-
+    align-items: start;
+    align-content: space-evenly;
+    gap: 0%;
 }
 
 .container-info{
